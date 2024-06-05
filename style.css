@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@100..900&family=Lexend+Deca:wght@100..900&display=swap');
+
+:root {
+  --bright-orange: hsl(31, 77%, 52%);
+  --dark-cyan: hsl(184, 100%, 22%);
+  --very-dark-cyan: hsl(179, 100%, 13%);
+  --transparent-white: hsla(0, 0%, 100%, 0.75);
+  --very-light-gray: hsl(0, 0%, 95%);
+  --font-h1: "Big Shoulders Display", sans-serif;
+  --font-p: "Lexend Deca", sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+body {
+  display: flex;
+  align-items: center;
+  font-family: var(--font-p);
+  justify-content: center;
+  min-height: 100dvh;
+}
+
+.container {
+  width: 100%;
+  display: flex;
+}
+
+.card {
+  padding: 42px;
+  max-width: 278px;
+  height: 450px;
+}
+
+.card h1 {
+  color: var(--very-light-gray);
+  font-family: var(--font-h1);
+  margin: 1rem 0;
+  font-size: 2rem;
+  text-transform: uppercase;
+}
+
+.card p {
+  color: var(--transparent-white);
+  font-family: var(--font-p);
+  font-size: 13.8px;
+  line-height: 1.5rem;
+  margin: 1rem 0;
+}
+
+.card button {
+  border: 0;
+  cursor: pointer;
+  background-color: var(--very-light-gray);
+  border-radius: 100vw;
+  padding: .75rem 2rem;
+  margin-top: 4rem;
+  border: 2px solid #fff;
+  transition: .5s all ease;
+}
+
+
+.card button:hover {
+  background-color: transparent;
+  color: var(--very-light-gray);
+}
+
+.card-1 button {
+  color: var(--bright-orange);
+}
+
+.card-2 button {
+  color: var(--dark-cyan);
+}
+
+.card-3 button {
+  color: var(--very-dark-cyan);
+}
+
+
+.card-1 {
+  background-color: var(--bright-orange);
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+}
+
+
+.card-2 {
+  background-color: var(--dark-cyan);
+}
+
+.card-3 {
+  background-color: var(--very-dark-cyan);
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+
+@media screen and (max-width: 844px) {
+  .container {
+    display: flex;
+    flex-flow: column wrap;
+    width: 100%;
+  }
+
+  .card-1 {
+    border-radius: 8px 8px 0 0;
+  }
+
+  .card-3 {
+    border-radius: 0 0 8px 8px;
+  }
+}
